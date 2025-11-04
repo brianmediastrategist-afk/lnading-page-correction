@@ -273,9 +273,9 @@ const Index = () => {
 
 
 
-              <h1 className="text-6xl lg:text-8xl font-black leading-[0.95] tracking-tight" style={{ background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <h1 className="text-6xl lg:text-8xl font-black leading-[0.95] tracking-tight text-secondary" style={{ textShadow: '0 2px 4px rgba(255,255,255,0.1)' }}>
 
-                Let's, Strategize<br/> market and <br/>automate with purpose
+                Strategize. Market. Automate.
 
               </h1>
 
@@ -297,20 +297,17 @@ const Index = () => {
 
                   onClick={scrollToDiscovery}
 
-                  className="text-base sm:text-lg px-8 py-4 h-auto rounded-full font-semibold flex items-center gap-3 group relative overflow-hidden"
-                  style={{ background: 'var(--gradient-accent)', boxShadow: '0 10px 40px hsla(24, 95%, 53%, 0.3)' }}
+                  className="text-base sm:text-lg px-8 py-6 h-auto rounded-lg font-semibold flex items-center gap-3 group bg-secondary text-white hover:bg-secondary/90 transition-all shadow-lg hover:shadow-xl"
 
                 >
 
-                  <span className="relative z-10">For Business Owners</span>
+                  <span>For Job Offers & Gigs</span>
 
-                  <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
 
                   </svg>
-
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
 
                 </Button>
 
@@ -322,10 +319,10 @@ const Index = () => {
 
                   onClick={() => setShowFreelancerModal(true)}
 
-                  className="text-base sm:text-lg px-8 py-4 h-auto rounded-full font-semibold border-2 border-secondary/20 hover:border-secondary/40 flex items-center gap-3 group bg-white/50 backdrop-blur-sm hover:bg-white/80 transition-all"
+                  className="text-base sm:text-lg px-8 py-6 h-auto rounded-lg font-semibold border-2 border-secondary/20 hover:border-secondary hover:bg-secondary/5 flex items-center gap-3 group bg-white transition-all shadow-md hover:shadow-lg"
                 >
 
-                  <span>For Freelancers</span>
+                  <span>Pick My Brain</span>
 
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 
