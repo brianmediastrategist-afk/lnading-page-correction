@@ -340,19 +340,19 @@ const Index = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-secondary/10">
                 <div className="space-y-1 text-center">
-                  <div className="text-4xl md:text-5xl font-black bg-gradient-to-br from-primary to-primary/70 bg-clip-text text-transparent">25+</div>
+                  <div className="text-4xl md:text-5xl font-black text-primary">25+</div>
                   <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Funnels Built</div>
 
                 </div>
 
                 <div className="space-y-1 text-center">
-                  <div className="text-4xl md:text-5xl font-black bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent flex items-center justify-center gap-1">4.9<span className="text-2xl md:text-3xl">★</span></div>
+                  <div className="text-4xl md:text-5xl font-black text-accent flex items-center justify-center gap-1">4.9<span className="text-2xl md:text-3xl">★</span></div>
                   <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Client Rating</div>
 
                 </div>
 
                 <div className="space-y-1 text-center">
-                  <div className="text-4xl md:text-5xl font-black bg-gradient-to-br from-secondary to-secondary/70 bg-clip-text text-transparent">500k+</div>
+                  <div className="text-4xl md:text-5xl font-black text-secondary">500k+</div>
                   <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Profits Generated</div>
 
                 </div>
@@ -369,27 +369,15 @@ const Index = () => {
 
               <div className="relative flex flex-col items-center gap-6">
 
-                <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[3rem] blur-2xl"></div>
 
-                  <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[3rem] blur-2xl"></div>
-
-                  <div className="relative w-[300px] sm:w-[340px] lg:w-[400px] aspect-[9/16] bg-white rounded-[2.5rem] overflow-hidden border border-secondary/10 hover:scale-[1.02] transition-all duration-500 group" style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.15)' }}>
-
-                    <img
-
-                      src="https://theclosecode.co.ke/wp-content/uploads/2025/09/hero-image-.webp"
-
-                      alt="Professional marketing and automation services"
-
-                      className="w-full h-full object-cover"
-
-                      loading="eager"
-
-                    />
-
-                  </div>
-
-                </div>
+                <img
+                  src="https://theclosecode.co.ke/wp-content/uploads/2025/09/hero-image-.webp"
+                  alt="Professional marketing and automation services"
+                  className="relative w-[300px] sm:w-[340px] lg:w-[400px] aspect-[9/16] object-cover rounded-[2.5rem] border border-secondary/10 hover:scale-[1.02] transition-all duration-500"
+                  style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.15)' }}
+                  loading="eager"
+                />
 
 
 
@@ -543,7 +531,7 @@ const Index = () => {
 
 
 
-              <h2 className="text-5xl lg:text-6xl font-black leading-tight" style={{ background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <h2 className="text-5xl lg:text-6xl font-black leading-tight text-secondary">
 
                 Let's Build Systems That Sell For You
 
@@ -639,11 +627,11 @@ const Index = () => {
 
                 <div className="flex -space-x-3">
 
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/70 border-2 border-white flex items-center justify-center text-white font-bold">JM</div>
+                  <div className="w-12 h-12 rounded-full bg-primary border-2 border-white flex items-center justify-center text-white font-bold">JM</div>
 
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent/70 border-2 border-white flex items-center justify-center text-white font-bold">SK</div>
+                  <div className="w-12 h-12 rounded-full bg-accent border-2 border-white flex items-center justify-center text-white font-bold">SK</div>
 
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-secondary/70 border-2 border-white flex items-center justify-center text-white font-bold">AL</div>
+                  <div className="w-12 h-12 rounded-full bg-secondary border-2 border-white flex items-center justify-center text-white font-bold">AL</div>
 
                 </div>
 
@@ -733,7 +721,7 @@ const Index = () => {
 
             </div>
 
-            <h2 className="text-5xl lg:text-6xl font-black mb-4 leading-tight" style={{ background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            <h2 className="text-5xl lg:text-6xl font-black mb-4 leading-tight text-secondary">
 
               Services That Scale
 
@@ -793,9 +781,9 @@ const Index = () => {
 
             </div>
 
-            <h2 className="text-5xl lg:text-6xl font-black mb-4 leading-tight">
+            <h2 className="text-5xl lg:text-6xl font-black mb-4 leading-tight text-secondary">
 
-              Work While You <span style={{ background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} className="inline">Sleep</span>
+              Work While You <span className="text-primary">Sleep</span>
 
             </h2>
 
