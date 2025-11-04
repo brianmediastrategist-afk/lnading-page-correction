@@ -424,7 +424,7 @@ const Index = () => {
 
                   <a
 
-                    href="https://tiktok.com@briankinavusha"
+                    href="https://tiktok.com/@briankinavusha"
 
                     target="_blank"
 
