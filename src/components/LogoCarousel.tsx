@@ -8,12 +8,16 @@ interface Logo {
 interface LogoCarouselProps {
   logos: Logo[];
   title: string;
+  direction?: "left" | "right";
+  duration?: number; // seconds
 }
 
-export default function LogoCarousel({ logos, title }: LogoCarouselProps) {
+export default function LogoCarousel({ logos, title, direction = "left", duration = 10 }: LogoCarouselProps) {
   const [isPaused, setIsPaused] = useState(false);
 
-  const displayLogos = [...logos, ...logos];
+  const headClones = logos.slice(-3);
+  const tailClones = logos.slice(0, 3);
+  const displayLogos = [...headClones, ...logos, ...logos, ...tailClones];
 
   return (
     <div className="space-y-3">
@@ -27,22 +31,18 @@ export default function LogoCarousel({ logos, title }: LogoCarouselProps) {
         onMouseLeave={() => setIsPaused(false)}
       >
         <div
-          className={`flex gap-8 px-4 transition-none ${
-            isPaused ? "" : "animate-scroll"
-          }`}
+          className={`flex gap-12 px-12 transition-none`}
           style={{
-            animation: isPaused ? "none" : "scroll 40s linear infinite",
+            animation: isPaused ? "none" : `${direction === "left" ? "scrollLeft" : "scrollRight"} ${duration}s linear infinite`,
+            willChange: "transform",
           }}
         >
           {displayLogos.map((logo, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 h-16 flex items-center justify-center group cursor-pointer"
-            >
+            <div key={`${logo.name}-${index}`} className="flex-shrink-0 h-16 flex items-center justify-center group cursor-pointer">
               <img
                 src={logo.url}
                 alt={logo.name}
-                className="h-12 object-contain transition-all duration-300 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] group-hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]"
+                className="h-12 md:h-14 object-contain transition-all duration-300 group-hover:scale-110"
               />
             </div>
           ))}
@@ -54,13 +54,13 @@ export default function LogoCarousel({ logos, title }: LogoCarouselProps) {
       </div>
 
       <style>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+        @keyframes scrollLeft {
+          0% { transform: translate3d(0,0,0); }
+          100% { transform: translate3d(-50%,0,0); }
+        }
+        @keyframes scrollRight {
+          0% { transform: translate3d(0,0,0); }
+          100% { transform: translate3d(50%,0,0); }
         }
       `}</style>
     </div>

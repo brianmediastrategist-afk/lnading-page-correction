@@ -70,7 +70,10 @@ export default function DetailsModal({
 
             <Button
               size="lg"
-              onClick={onBookMeeting}
+              onClick={() => {
+                onBookMeeting();
+                onClose();
+              }}
               className="w-full bg-gradient-to-r from-primary to-accent hover:shadow-lg transition-all"
             >
               Book a Meeting
